@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="shadowify" ExtensionBundleName="Shadowify" ExtensionBundleVersion="1.0.0" Version="6.0">
+  <ExtensionList>
+    <Extension Id="shadowify" Version="1.0.0"/>
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="PHXS" Version="16.0" Port="8000" />
+      <Host Name="PHSP" Version="16.0" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All"/>
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="6.0"/>
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="shadowify">
+      <Host Name="PHXS" Port="8000"/>
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath>
+          <CEFCommandLine>
+            <Parameter>--allow-file-access-from-files</Parameter>
+            <Parameter>--allow-file-access</Parameter>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Shadowify</Menu>
+          <Geometry>
+            <Size>
+              <Height>500</Height>
+              <Width>237</Width>
+            </Size>
+          </Geometry>
+          <Icons>
+            <Icon Type="Normal">./assets/icon_dark.png</Icon>
+            <Icon Type="RollOver">./assets/icon_dark.png</Icon>
+            <Icon Type="DarkNormal">./assets/icon.png</Icon>
+            <Icon Type="DarkRollOver">./assets/icon.png</Icon>
+          </Icons>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
